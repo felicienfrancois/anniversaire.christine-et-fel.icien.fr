@@ -38,7 +38,7 @@
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 1.5rem;
       border-radius: 12px;
       color: white;
@@ -115,7 +115,7 @@
   <section style="background-image: url('mariage.jpg');">
     <div class="overlay">
       <h1>Il y a 15 ans...</h1>
-      <p>Nous nous sommes dit OUI 💒</p>
+      <p>Nous nous sommes dit OUI 💍</p>
     </div>
   </section>
 
@@ -133,23 +133,36 @@
     </div>
   </section>
 
-  <section style="background-image: url('maintenant.jpg');">
+  <section style="padding: 0">
+    <video style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; z-index: -1; filter: blur(20px);">
+      <source src="dancing.webm" type="video/webm">
+    </video> 
+    <video loop autoplay style="height: 100%; max-height: 100%; margin: 0 5px;">
+      <source src="dancing.webm" type="video/webm">
+    </video>
     <div class="overlay">
       <h1>Et si on fétait ça 🎉</h1>
     </div>
   </section>
 
   <section style="background-image: url('pecany.jpg');">
-    <div class="overlay">
+    <div class="overlay" style="max-width: 800px">
       <h2>Le 18 Octobre 2025</h2>
-      <p>🏡Au <a href="https://maps.app.goo.gl/6Si3f1UqhQVs74Wf6" target="_blank">domaine de Pécany</a>, en Dordogne</p>
-      <p>🛈 On fait la fête le Samedi 18 soir<br/>mais les gites sont réservés du Samedi 18 au Lundi 20 pour profiter sans stresser</p>
+      <h2>Au <a href="https://domainedepecany.fr/" target="_blank">domaine de Pécany</a>, en <a href="https://maps.app.goo.gl/6Si3f1UqhQVs74Wf6">Dordogne</a></h2>
+      <div style="text-align: justify">
+      <ul>
+        <li>On fait la fête le Samedi 18 soir.</li>
+        <li>Tout le monde peut dormir sur place dans les gites du domaine.</li>
+        <li>La salle, les gites, la piscine couverte et chauffée sont privatisés du Samedi 18 au Lundi 20, pour prolonger la fête le dimanche, profiter d'être ensemble et/ou faire du tourisme selon l'humeur de chacun.</li>
+        <li>On prend en charge la privatisation du domaine, le repas et la fête du Samedi soir. Peut être aussi les chocolatines le Dimanche matin 😸</li>
+        <li>A prévoir de votre coté : Le déplacement sur place, les draps (sinon facturés 10€/lit par le domaine), et les repas du Dimanche (pour ceux qui restent).</li>
+      </ul>
     </div>
   </section>
 
   <section class="form-block">
     <h2>Répondez à notre invitation</h2>
-    <form action="https://formspree.io/f/mdkdnjyo" method="post">
+    <form action="https://formspree.io/f/mdkdnjyo" method="post" style="text-align: left">
       <input type="text" name="name" placeholder="Votre nom" required />
       <input type="email" name="email" placeholder="Votre adresse e-mail" required />
       <input type="phone" name="phone" placeholder="Votre numéro de téléphone" required />
