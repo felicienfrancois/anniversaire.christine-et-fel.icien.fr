@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christine et Félicien - Et si on fêtait ça ?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      scroll-snap-type: y mandatory;
+    }
+
+    section {
+      scroll-snap-align: start;
+      height: 100vh;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 12px;
+      color: white;
+      margin-top: 20%;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-block {
+      background-color: #222;
+      color: white;
+      padding: 4rem 2rem;
+      height: auto;
+      flex-direction: column;
+    }
+
+    form {
+      width: 500px;
+      max-width: 90vw;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+     
+    }
+
+    input, textarea, button {
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sections -->
+  <section style="background-image: url('your-image-url1.jpg');">
+    <div class="overlay">
+      <h1>Il y a 20 ans...</h1>
+      <p>Quelque part en Bretagne naissait une histoire d'amour 💕</p>
+    </div>
+  </section>
+
+  <section style="background-image: url('DSC_7266_preview.jpeg');">
+    <div class="overlay">
+      <h1>Il y a 15 ans...</h1>
+      <p>Des souvenirs gravés pour toujours 📷</p>
+    </div>
+  </section>
+
+  <section style="background-image: url('P1060422.JPG');">
+    <div class="overlay">
+      <h1>Il y a 10 ans...</h1>
+      <p>Naissait Méline</p>
+    </div>
+  </section>
+
+  <section style="background-image: url('P1030249.JPG');">
+    <div class="overlay">
+      <h1>Il y a 7 ans...</h1>
+      <p>Naissait Azalée</p>
+    </div>
+  </section>
+
+  <section style="background-image: url('your-image-url5.jpg');">
+    <div class="overlay">
+      <h1>Et si on fétait ça ?</h1>
+      <p>On veut faire la fête avec vous ! 🎉</p>
+    </div>
+  </section>
+
+  <section style="background-image: url('your-image-url6.jpg');">
+    <div class="overlay">
+      <h2>Quand ? Où ? Quoi ?</h2>
+      <p><strong>Date :</strong> Samedi 6 septembre 2025</p>
+      <p><strong>Heure :</strong> 17h00</p>
+      <p><strong>Lieu :</strong> Domaine de la Forêt, 1234 Rue du Bonheur, France</p>
+      <p><strong>Tenue :</strong> Chic décontracté</p>
+    </div>
+  </section>
+
+  <section class="form-block">
+    <h2>Répondez à notre invitation</h2>
+    <form>
+      <input type="text" name="name" placeholder="Votre nom" required />
+      <input type="email" name="email" placeholder="Votre email" required />
+      <textarea name="message" rows="4" placeholder="Un petit mot ou vos questions..."></textarea>
+      <button type="submit">Je viens !</button>
+    </form>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    let currentIndex = 0;
+
+    function scrollToSection(direction) {
+      currentIndex = Math.min(sections.length - 1, Math.max(0, currentIndex + direction));
+      sections[currentIndex].scrollIntoView({ behavior: "smooth" });
+    }
+
+    window.addEventListener("scroll", () => {
+      sections.forEach((sec, i) => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+          currentIndex = i;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
