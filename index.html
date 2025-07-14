@@ -39,10 +39,15 @@
 
     .overlay {
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 12px;
       color: white;
-      margin-top: 20%;
+      bottom: 10vh;
+      position: absolute;
+    }
+
+    .overlay a {
+      color: white;
     }
 
     h1, h2 {
@@ -51,12 +56,12 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.7rem;
       margin-bottom: 1rem;
     }
 
@@ -64,13 +69,14 @@
       background-color: #222;
       color: white;
       padding: 4rem 2rem;
+      padding: 0;
       height: auto;
       flex-direction: column;
     }
 
     form {
       width: 500px;
-      max-width: 90vw;
+      max-width: 80vw;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -100,58 +106,61 @@
 <body>
 
   <!-- Sections -->
-  <section style="background-image: url('your-image-url1.jpg');">
+  <section style="background-image: url('debut.jpg');">
     <div class="overlay">
       <h1>Il y a 20 ans...</h1>
       <p>Quelque part en Bretagne naissait une histoire d'amour 💕</p>
     </div>
   </section>
 
-  <section style="background-image: url('DSC_7266_preview.jpeg');">
+  <section style="background-image: url('mariage.jpg');">
     <div class="overlay">
       <h1>Il y a 15 ans...</h1>
-      <p>Des souvenirs gravés pour toujours 📷</p>
+      <p>Nous nous sommes dit OUI 💒</p>
     </div>
   </section>
 
-  <section style="background-image: url('P1060422.JPG');">
+  <section style="background-image: url('Meline.jpg');">
     <div class="overlay">
       <h1>Il y a 10 ans...</h1>
-      <p>Naissait Méline</p>
+      <p>Naissait Méline 🐥</p>
     </div>
   </section>
 
-  <section style="background-image: url('P1030249.JPG');">
+  <section style="background-image: url('Azalee.jpg');">
     <div class="overlay">
       <h1>Il y a 7 ans...</h1>
-      <p>Naissait Azalée</p>
+      <p>Naissait Azalée 🐥</p>
     </div>
   </section>
 
-  <section style="background-image: url('your-image-url5.jpg');">
+  <section style="background-image: url('maintenant.jpg');">
     <div class="overlay">
-      <h1>Et si on fétait ça ?</h1>
-      <p>On veut faire la fête avec vous ! 🎉</p>
+      <h1>Et si on fétait ça 🎉</h1>
     </div>
   </section>
 
-  <section style="background-image: url('your-image-url6.jpg');">
+  <section style="background-image: url('pecany.jpg');">
     <div class="overlay">
-      <h2>Quand ? Où ? Quoi ?</h2>
-      <p><strong>Date :</strong> Samedi 6 septembre 2025</p>
-      <p><strong>Heure :</strong> 17h00</p>
-      <p><strong>Lieu :</strong> Domaine de la Forêt, 1234 Rue du Bonheur, France</p>
-      <p><strong>Tenue :</strong> Chic décontracté</p>
+      <h2>Le 18 Octobre 2025</h2>
+      <p>🏡Au <a href="https://maps.app.goo.gl/6Si3f1UqhQVs74Wf6" target="_blank">domaine de Pécany</a>, en Dordogne</p>
+      <p>🛈 On fait la fête le Samedi 18 soir<br/>mais les gites sont réservés du Samedi 18 au Lundi 20 pour profiter sans stresser</p>
     </div>
   </section>
 
   <section class="form-block">
     <h2>Répondez à notre invitation</h2>
-    <form>
+    <form action="https://formspree.io/f/mdkdnjyo" method="post">
       <input type="text" name="name" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre email" required />
+      <input type="email" name="email" placeholder="Votre adresse e-mail" required />
+      <input type="phone" name="phone" placeholder="Votre numéro de téléphone" required />
+      <input type="number" name="adultes" placeholder="Nombre d'adultes" value="" required />
+      <input type="number" name="enfants" placeholder="Nombre d'enfants" value="" />
+      <label><input type="checkbox" name="presence_fete" /> &nbsp; Présence à la fête du Samedi soir</label>
+      <label><input type="checkbox" name="premiere_nuit" /> &nbsp; 1ère nuit sur place</label>
+      <label><input type="checkbox" name="deuxieme_nuit" /> &nbsp; 2ème nuit sur place</label>
       <textarea name="message" rows="4" placeholder="Un petit mot ou vos questions..."></textarea>
-      <button type="submit">Je viens !</button>
+      <button type="submit">Envoyer</button>
     </form>
   </section>
 
